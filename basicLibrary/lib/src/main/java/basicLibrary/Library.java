@@ -74,14 +74,14 @@ public class Library {
             public static int binarySearch(int[] binaryArray , int checker){
 
         int n =binaryArray.length;
-        int 1 =0;
+        int l =0;
         int r =n-1;
         int m=0;
         while(1<n-1){
 
-            m=(1+r)/2;
+            m=(l+r)/2;
             if(binaryArray[m]<checker) {
-                1 = m + 1;
+                l = m + 1;
             }else if(binaryArray[m]>checker){
                 r=m-1;
             }
