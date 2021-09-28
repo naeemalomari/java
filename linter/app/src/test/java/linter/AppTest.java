@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.*;
 class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
-        String actual = App.readFile("C:\\Users\\Student\\401Java\\java-fundemantals\\linter\\app\\src\\main\\resources\\gates.js");
-        assertTrue(!actual.contains(classUnderTest.readFile("Line "+" 5: Missing Semicolon.+\n")));
+        String actual = App.readFile("src\\main\\resources\\gates.js");
+        assertTrue(!actual.contains(classUnderTest.readFile("Line 5: Missing Semicolon.\n")));
 
     }
 }
