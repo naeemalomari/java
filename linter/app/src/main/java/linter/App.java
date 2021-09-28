@@ -10,9 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 public class App {
 
-
     public static String readFile(String place){
-
         int lineNumber = 1;
         String result = "";
         Path path = Paths.get(place);
@@ -33,4 +31,5 @@ public class App {
         }
         return result;
     }
+
 }
