@@ -5,8 +5,9 @@ package basicLibrary;
 
 
 public class Library {
+    public static void main(String[] args) {
 
-
+    }
     public static int[] roll(int numRoll) {
 
         int[] tryArray = new int[numRoll];
@@ -71,26 +72,5 @@ public class Library {
     }
 
 
-            public static int binarySearch(int[] binaryArray , int checker){
-
-        int n =binaryArray.length;
-        int l =0;
-        int r =n-1;
-        int m=0;
-        while(1<n-1){
-
-            m=(l+r)/2;
-            if(binaryArray[m]<checker) {
-                l = m + 1;
-            }else if(binaryArray[m]>checker){
-                r=m-1;
-            }
-            else
-                return m;
-
-        }
-
-                return -1;
-            }
 
 }
