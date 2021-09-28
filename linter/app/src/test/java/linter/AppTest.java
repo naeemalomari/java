@@ -10,7 +10,7 @@ class AppTest {
     @Test void appHasAGreeting() {
         App classUnderTest = new App();
         String actual = App.readFile("C:\\Users\\Student\\401Java\\java-fundemantals\\linter\\app\\src\\main\\resources\\gates.js");
-        assertTrue(!actual.contains(classUnderTest.readFile("Line " + 3 + ": Missing Semicolon."+"\n")));
+        assertTrue(!actual.contains(classUnderTest.readFile("Line "+" 5: Missing Semicolon.+\n")));
 
     }
 }
