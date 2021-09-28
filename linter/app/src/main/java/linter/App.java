@@ -3,20 +3,16 @@
  */
 
 package linter;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-
 public class App {
 
-    public static void main(String[] args) {
-        App.readJS("C:\\Users\\Student\\401Java\\java-fundemantals\\linter\\app\\src\\main\\resources\\gates.js");
-    }
 
-    public static String readJS(String place){
+    public static String readFile(String place){
+
         int lineNumber = 1;
         String result = "";
         Path path = Paths.get(place);
@@ -24,19 +20,13 @@ public class App {
             BufferedReader reader = Files.newBufferedReader(path);
             String line = reader.readLine();
             while(line != null){
-
-
                 if(line.length() != 0 && line.charAt(line.length()-1) != ';' && line.charAt(line.length()-1) != '{' && line.charAt(line.length()-1) != '}' && !line.contains("if") && !line.contains("else")){
-                    line = "Line " + lineNumber + ": Missing semicolon.";
+                    line = "Line " + lineNumber + ": Missing Semicolon.";
                     System.out.println(line);
                 }
-
-
-
                 result += line;
                 line = reader.readLine();
                 lineNumber++;
-
             }
         }catch (IOException ioException){
             System.out.println(ioException);
