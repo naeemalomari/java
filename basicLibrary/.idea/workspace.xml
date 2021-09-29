@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/lib/out/production/classes/basicLibrary/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/out/production/classes/basicLibrary/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/basicLibrary/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/basicLibrary/Library.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/src/main/java/basicLibrary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/basicLibrary/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/basicLibrary/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/test/java/basicLibrary/LibraryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,10 +92,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LibraryTest.someLibraryMethodReturnsTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="basicLibrary.lib.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="basicLibrary.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="basicLibrary" />
+      <option name="MAIN_CLASS_NAME" value="basicLibrary.LibraryTest" />
+      <option name="METHOD_NAME" value="someLibraryMethodReturnsTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Library" />
+        <item itemvalue="JUnit.LibraryTest.someLibraryMethodReturnsTrue" />
         <item itemvalue="JUnit.LibraryTest" />
       </list>
     </recent_temporary>
