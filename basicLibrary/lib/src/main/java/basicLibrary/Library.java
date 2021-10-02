@@ -4,6 +4,11 @@
 package basicLibrary;
 
 
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Library {
     public static void main(String[] args) {
 
@@ -71,6 +76,64 @@ public class Library {
         return lowestAvgArr;
     }
 
+    public String maxAndMin(int[][] arr) {
+        int maxValue = arr[0][0];
+        int minValue = arr[0][0];
+        for (int i = 0; i < arr.length; i++) {
 
+            for (int j = 0; j < arr[i].length; j++) {
+                if (arr[i][j] <= minValue) {
+                    minValue = arr[i][j];
+
+                }
+
+                if (arr[i][j] >= maxValue) {
+                    maxValue = arr[i][j];
+                }
+            }
+        }
+
+
+        Set<Integer> uniqueValues = new HashSet<>();
+        String returnedString = "High: " + maxValue + "\n" + "Low : " + minValue;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = 0; j < arr[i].length; j++) {
+
+                uniqueValues.add(arr[i][j]);
+
+            }
+        }
+
+        for(int i = minValue; i < maxValue; i++)
+
+            if(uniqueValues.contains(i)){
+
+            }
+            else{
+                returnedString = returnedString.concat("\n"+"Never saw temperature: " + i);
+            }
+
+
+
+        return returnedString;
+    }
+
+
+    public String tally(List<String> votes) {
+        HashSet<String> votedItems = new HashSet<>();
+        votedItems.addAll(votes);
+        int numVotes = 0;
+        String winner= null;
+        for (String item : votedItems) {
+            int count = Collections.frequency(votes, item);
+            if (numVotes < count) {
+                numVotes = count;
+                winner = item;
+            }
+        }
+        return winner;
+    }
 
 }
