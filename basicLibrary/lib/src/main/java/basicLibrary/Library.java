@@ -121,7 +121,7 @@ public class Library {
     }
 
 
-    public static String tally(List<String> votes) {
+    public String tally(List<String> votes) {
         HashSet<String> votedItems = new HashSet<>();
         votedItems.addAll(votes);
         int numVotes = 0;
