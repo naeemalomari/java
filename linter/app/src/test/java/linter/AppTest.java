@@ -4,13 +4,19 @@
 package linter;
 
 import org.junit.jupiter.api.Test;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import static org.junit.jupiter.api.Assertions.*;
-
-class AppTest {
-    @Test void appHasAGreeting() {
-        App classUnderTest = new App();
-        String actual = App.readFile("src\\main\\resources\\gates.js");
-        assertTrue(!actual.contains(classUnderTest.readFile("Line 5: Missing Semicolon.\n")));
-
-    }
-}
+//
+//class AppTest {
+//    @Test void appHasAGreeting() {
+//        App classUnderTest = new App();
+//        Path actual = Paths.get("src\\main\\resources\\gates.js");
+//        String answer="Line 3: Missing Semicolon.\n" +
+//                "Line 5: Missing Semicolon.\n";
+//        assertEquals(answer,classUnderTest(actual));
+//
+//    }
+//}
