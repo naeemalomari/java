@@ -5,10 +5,10 @@ import java.util.LinkedList;
 public class Restaurant { // implements RestaurantInterface {
 
     private String name;
-    private int rate;
+    private double rate;
     private int price;
 
-    public Restaurant(String name, int rate, int price) {
+    public Restaurant(String name, double rate, int price) {
         this.name = name;
         this.rate = rate;
         this.price = price;
@@ -17,8 +17,8 @@ public class Restaurant { // implements RestaurantInterface {
     private LinkedList<Review> reviews = new LinkedList<>();
 
 
-    public int verifyRate(int rate) {
-        int defaults = 5;
+    public double verifyRate(double rate) {
+        double defaults = 5;
         while (rate > 5 || rate < 0) {
             System.out.println("Choose a number between 0 and 5");
             System.out.println("DEFAULT NUMBER WILL BE RATED");
@@ -42,8 +42,17 @@ public class Restaurant { // implements RestaurantInterface {
 
     public void addReview(Review review) {
         this.reviews.add(review);
+        updateRate();
     }
-
+    public void updateRate(){
+        double current = 0;
+        for (int i = 0; i < getReviews().size(); i++) {
+            current = current + getReviews().get(i).getStars();
+        }
+        current = current / (getReviews().size());
+//        current = Math.round(current);
+        this.rate = current;
+    }
     @Override
     public String toString() {
         return "Restaurant{" +

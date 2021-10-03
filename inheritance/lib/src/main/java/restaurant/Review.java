@@ -31,4 +31,8 @@ public class Review { // implements ReviewInterface {
                 ", " + printStars(stars) +
                 '}';
     }
+
+    public double getStars() {
+        return stars;
+    }
 }

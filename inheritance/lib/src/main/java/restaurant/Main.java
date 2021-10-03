@@ -7,13 +7,14 @@ package restaurant;
 public class Main {
     public static void main(String[] args) {
 
-        Restaurant rest = new Restaurant("KFC", 0, 55);
+        Restaurant rest = new Restaurant("KFC", 2.25, 55);
         System.out.println(rest);
 
-        Review review1 = new Review("Very Good", "Naim Al-Omari", 3);
+        Review review1 = new Review("Very Good", "Naim Al-Omari", 2);
         rest.addReview(review1);
         Review review2 = new Review("Good", "mohammad", 1);
         rest.addReview(review2);
         System.out.println(rest.getReviews());
+        System.out.println(rest);
     }
 }
