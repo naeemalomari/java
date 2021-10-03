@@ -6,19 +6,14 @@ package restaurant;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("PAASSS NNN");
 
-    Restaurant macDolads =new Restaurant("macDolads" ,6, 20);
-    System.out.println(macDolads);
+        Restaurant rest = new Restaurant("KFC", 0, 55);
+        System.out.println(rest);
 
-    Restaurant KFC =new Restaurant("KFC" , 2,10);
-        System.out.println(KFC);
-
-        Restaurant ابوعقله_للفلافل = new Restaurant("ابوعقله_للفلافل" , 0, 100);
-        System.out.println(ابوعقله_للفلافل);
-
-        Restaurant review =new Review("jcjhv", 2,5, "kjbvkjlkjnv", "ajbce", 3);
-        System.out.println(review);
+        Review review1 = new Review("Very Good", "Naim Al-Omari", 3);
+        rest.addReview(review1);
+        Review review2 = new Review("Good", "mohammad", 1);
+        rest.addReview(review2);
+        System.out.println(rest.getReviews());
     }
-
 }

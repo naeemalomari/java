@@ -1,6 +1,8 @@
 package restaurant;
 
-public class Restaurant  {
+import java.util.LinkedList;
+
+public class Restaurant { // implements RestaurantInterface {
 
     private String name;
     private int rate;
@@ -12,6 +14,9 @@ public class Restaurant  {
         this.price = price;
     }
 
+    private LinkedList<Review> reviews = new LinkedList<>();
+
+
     public int verifyRate(int rate) {
         int defaults = 5;
         while (rate > 5 || rate < 0) {
@@ -19,7 +24,7 @@ public class Restaurant  {
             System.out.println("DEFAULT NUMBER WILL BE RATED");
             return defaults;
         }
-        return defaults=rate;
+        return defaults = rate;
     }
 
     public String verifyPrice(int price) {
@@ -27,11 +32,16 @@ public class Restaurant  {
             return "$";
         } else if (price < 10 || price <= 25) {
             return "$$";
-        }if (price < 25 || price <= 50) {
+        }
+        if (price < 25 || price <= 50) {
             return "$$$";
         } else {
             return "$$$$";
         }
+    }
+
+    public void addReview(Review review) {
+        this.reviews.add(review);
     }
 
     @Override
@@ -39,9 +49,36 @@ public class Restaurant  {
         return "Restaurant{" +
                 "name='" + name + '\'' +
                 ", rate=" + verifyRate(rate) +
-                ", priceCategory=" + verifyPrice(price) +
+                "," + verifyPrice(price) +
                 '}';
     }
 
+    public LinkedList<Review> getReviews() {
+        return reviews;
+    }
 
+//    @Override
+//    public String getName() {
+//        return null;
+//    }
+//
+//    @Override
+//    public double getNumberOfStars() {
+//        return 0;
+//    }
+//
+//    @Override
+//    public String getPriceCategory() {
+//        return null;
+//    }
+//
+//    @Override
+//    public void addReview(Review review) {
+//
+//    }
+//
+//    @Override
+//    public void updateStars() {
+//
+//    }
 }
