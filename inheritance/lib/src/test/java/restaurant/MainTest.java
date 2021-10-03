@@ -6,8 +6,15 @@ package restaurant;
 import org.junit.jupiter.api.Test;
 
 class MainTest {
-    @Test void someLibraryMethodReturnsTrue() {
+
+    @Test
+    public void someLibraryMethodReturnTrue() {
         Main classUnderTest = new Main();
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    }
+
+
+    @Test
+    public void constructorRestaurant() {
+        Restaurant test = new Restaurant("kfc", 4, 10);
     }
 }
