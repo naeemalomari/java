@@ -7,14 +7,62 @@ package restaurant;
 public class Main {
     public static void main(String[] args) {
 
-        Restaurant rest = new Restaurant("KFC", 2.25, 55);
+        Restaurant rest = new Restaurant("KFC", 2.75, 55);
+//        System.out.println(rest);
+
+        Review review1 = new Review("Very Good", "Naim Al-Omari", 5);
+//        rest.addReview(review1);
+
+        Review review2 = new Review("Good", "mohammad", 4);
+        rest.addReview(review2);
+
+        Review review3 = new Review("bad", "mohannad", 0);
+        rest.addReview(review3);
+
+        Shop shop = new Shop("ZARA", "This oufull I didn't like it ", 50);
+        Review review4 = new Review("not good I don't like these shops", "Ibraheem", 1);
+        shop.addReview(review4);
+//        System.out.println("------------------------------");
+//        Review revعقله=new Restaurant("I don't like it", "naeeeeem",5);
+//        System.out.println(revعقله);
+//        System.out.println("------------------------------");
+        Theater theater = new Theater("irbid mall");
+        Review review5 = new Review("All GOOD", "hdhdhdhdhdhNaim", 5);
+//        theater.addReview(review5);
+
+        Theater theater2 = new Theater("AMMAN");
+        Review review6 = new Review("AALLLL GOOOD", "hdhdhdhdhdhNaim", 5);
+
+        theater2.removeReview(review6);
+
+//        System.out.println("\n");
+//        System.out.println(theater.getReview());
+//        theater.checkDuplication();
+        theater.addMovie("avatar");
+        theater.addMovie("game of thrones");
+        theater.addMovie("peaky Blinders");
+        theater.addMovie("ME .BEN");
+        theater.addMovie("the office");
+        theater.removeMovie("ME .BEN");
+        theater.addReview(review1,"اللمبي8");
+//        System.out.println(theater.getTheaterReviews());
+        theater.addReview(review1,"اللمبي8");
+        theater.addReview(review1,"ME.BEN");
+
+//        System.out.println("============");
+
+//        System.out.println("============");
+
+//        System.out.println(theater);
+        System.out.println("\n");
+
+        System.out.println(rest.getReviews());
+
+
+        System.out.println(shop.getShopReview());
         System.out.println(rest);
 
-        Review review1 = new Review("Very Good", "Naim Al-Omari", 2);
-        rest.addReview(review1);
-        Review review2 = new Review("Good", "mohammad", 1);
-        rest.addReview(review2);
-        System.out.println(rest.getReviews());
-        System.out.println(rest);
+        System.out.println(shop);
+
     }
 }

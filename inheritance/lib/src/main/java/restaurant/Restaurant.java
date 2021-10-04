@@ -2,20 +2,28 @@ package restaurant;
 
 import java.util.LinkedList;
 
-public class Restaurant { // implements RestaurantInterface {
+public class Restaurant  {
 
     private String name;
     private double rate;
     private int price;
 
+
     public Restaurant(String name, double rate, int price) {
+
         this.name = name;
         this.rate = rate;
         this.price = price;
+        this.reviews = reviews;
     }
 
     private LinkedList<Review> reviews = new LinkedList<>();
 
+
+
+    public LinkedList<Review> getReviews() {
+        return reviews;
+    }
 
     public double verifyRate(double rate) {
         double defaults = 5;
@@ -44,7 +52,8 @@ public class Restaurant { // implements RestaurantInterface {
         this.reviews.add(review);
         updateRate();
     }
-    public void updateRate(){
+
+    public void updateRate() {
         double current = 0;
         for (int i = 0; i < getReviews().size(); i++) {
             current = current + getReviews().get(i).getStars();
@@ -53,6 +62,7 @@ public class Restaurant { // implements RestaurantInterface {
 //        current = Math.round(current);
         this.rate = current;
     }
+
     @Override
     public String toString() {
         return "Restaurant{" +
@@ -62,9 +72,6 @@ public class Restaurant { // implements RestaurantInterface {
                 '}';
     }
 
-    public LinkedList<Review> getReviews() {
-        return reviews;
-    }
 
 //    @Override
 //    public String getName() {

@@ -15,6 +15,31 @@ class MainTest {
 
     @Test
     public void constructorRestaurant() {
-        Restaurant test = new Restaurant("kfc", 4, 10);
+        Restaurant test = new Restaurant("KFC", 2.75, 55);
     }
+
+    @Test
+    public void constructorShop() {
+        Shop test1 = new Shop("kfc", "something went wrong", 10);
+    }
+
+    ;
+
+    @Test
+    public void testFunctionality() {
+        Shop test = new Shop("ZARA", "something went wrong", 10);
+        Review review4 = new Review("not good very expensive", "Ibrahem", 1);
+        test.addReview(review4);
+    }
+
+@Test
+    public void testTheater(){
+        Theater test =new Theater("Amman Theater");
+        test.addMovie("avatar");
+        test.addMovie("beakyBlinder");
+        test.removeMovie("beakyBlinder");
+
 }
+
+}
+
