@@ -44,8 +44,8 @@ class MainTest {
     public void newFunctionality(){
     Review review1 = new Review("Very Good", "Naim Al-Omari", 5);
     Theater test =new Theater("Amman Theater");
-    test.addReview(review1,"اللمبي8");
-    test.addReview(review1,"اللمبي8");
+    test.addReview(review1,"needforspeed");
+    test.addReview(review1,"needforspeed");
 
 }
 }

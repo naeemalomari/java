@@ -44,9 +44,9 @@ public class Main {
         theater.addMovie("ME .BEN");
         theater.addMovie("the office");
         theater.removeMovie("ME .BEN");
-        theater.addReview(review1,"اللمبي8");
+        theater.addReview(review1,"needforspeed");
 //        System.out.println(theater.getTheaterReviews());
-        theater.addReview(review1,"اللمبي8");
+        theater.addReview(review1,"needforspeed");
         theater.addReview(review1,"ME.BEN");
 
 //        System.out.println("============");
